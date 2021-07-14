@@ -44,6 +44,8 @@ public class TreeApp {
         System.out.println(get(root, 33));
         add(root, 33);
         System.out.println(get(root, 33));
+
+        traversalInOrder(root);
     }
 
     public static Node add(Node node, int data) {
@@ -58,6 +60,16 @@ public class TreeApp {
         }
 
         return node;
+    }
+
+    public static void traversalInOrder(Node node) {
+        if (node == null) {
+            return ;
+        }
+
+        traversalInOrder(node.getLeft());
+        System.out.println(node.getData());
+        traversalInOrder(node.getRight());
     }
 
     public static Node get(Node node, int data) {
