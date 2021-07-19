@@ -1,6 +1,7 @@
 package repeat;
 
 public class QuickSort {
+
     public static void main(String[] args) {
         int[] numbers = {4, 5, 1, 3, 2, 8, 7, 7, 9, 6}; // 10개
         quickSort(numbers);
